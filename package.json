@@ -1,0 +1,34 @@
+{
+    "name": "prompt-generator-bot",
+    "version": "1.0.0",
+    "description": "A simple Discord bot that forwards calls to a FastAPI endpoint and writes the response back into the chat.",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc",
+        "start": "cross-env TS_NODE_BASEURL=dist node -r tsconfig-paths/register --enable-source-maps dist/index.js",
+        "start:dev": "npx tsc-watch --noClear --onSuccess \"yarn run start\""
+    },
+    "dependencies": {
+        "@sapphire/framework": "^4.0.2",
+        "@sapphire/plugin-logger": "^3.0.1",
+        "@sapphire/stopwatch": "^1.5.0",
+        "@sapphire/ts-config": "^3.3.4",
+        "axios": "^1.3.2",
+        "discord.js": "^14.7.1",
+        "dotenv": "^16.0.3"
+    },
+    "author": "breeeze",
+    "devDependencies": {
+        "@types/node": "^18.13.0",
+        "@typescript-eslint/eslint-plugin": "^5.51.0",
+        "@typescript-eslint/parser": "^5.51.0",
+        "cross-env": "^7.0.3",
+        "eslint": "^8.33.0",
+        "eslint-config-prettier": "^8.6.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "prettier": "^2.8.3",
+        "tsconfig-paths": "^4.1.2",
+        "typescript": "^4.9.5"
+    },
+    "license": "MIT"
+}
